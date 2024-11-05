@@ -1,0 +1,57 @@
+
+package bsit2c.deiparine.prs;
+import java.util.Scanner;
+
+public class BSIT2CDEIPARINEPRS {
+
+   
+    public static void main(String[] args) {
+        
+       String response;
+       
+       Scanner sc = new Scanner(System.in);
+       boolean exit = true;
+       do{
+       System.out.println("-------------------------------------"); 
+       System.out.println("WELCOME TO PARKING RECORDS SYSTEM!");
+       System.out.println("-------------------------------------");
+       System.out.println("1.CUSTOMER");
+       System.out.println("2.PARK");
+       System.out.println("3.RECORDS");
+       System.out.println("4.REPORTS");
+       System.out.println("5.EXIT");
+       System.out.println("-------------------------------------");
+       
+       System.out.println("Enter Action:");
+       int act = sc.nextInt();
+       
+       switch(act){
+           
+           case 1:
+               Customer cs = new Customer();
+               cs.cTransactions();
+               break;
+           case 2:
+               Park pk = new Park();
+               pk.pTransactions();
+               break;
+           case 3:
+               Records rs = new Records();
+               rs.rTransactions();
+               break;
+           case 4:
+               break;
+           case 5:
+               System.out.println("Exit Selected... type (yes) to continue:");
+                response = sc.next();
+                if(response.equalsIgnoreCase("yes")){
+                  exit = false;
+                }
+               break;
+           default:
+               System.out.println("Invalid Action!");
+            }          
+       
+        }while(exit);
+    }   
+}
