@@ -15,9 +15,9 @@ public class BSIT2CDEIPARINEPRS {
        System.out.println("-------------------------------------"); 
        System.out.println("WELCOME TO PARKING RECORDS SYSTEM!");
        System.out.println("-------------------------------------");
-       System.out.println("1.CUSTOMER");
-       System.out.println("2.PARK");
-       System.out.println("3.RECORDS");
+       System.out.println("1.VEHICLE");
+       System.out.println("2.PARKING SPACE");
+       System.out.println("3.PARKING_TRANSACTION");
        System.out.println("4.REPORTS");
        System.out.println("5.EXIT");
        System.out.println("-------------------------------------");
@@ -28,16 +28,16 @@ public class BSIT2CDEIPARINEPRS {
        switch(act){
            
            case 1:
-               Customer cs = new Customer();
-               cs.cTransactions();
+               Vehicle cs = new Vehicle();
+               cs.VehicleRec();
                break;
            case 2:
-               Park pk = new Park();
-               pk.pTransactions();
+               Parking_Space pk = new Parking_Space();
+               pk.SpaceRec();
                break;
            case 3:
-               Records rs = new Records();
-               rs.rTransactions();
+               Parking_Transaction rs = new Parking_Transaction();
+               rs.ParkTrans();
                break;
            case 4:
                break;
